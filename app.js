@@ -9,10 +9,4 @@ refreshButton.addEventListener("click", function () {
             adviceNum.innerHTML = res.data.slip.id;
             adviceText.innerHTML = `"${res.data.slip.advice}"`;
         })
-    setTimeout(() => {
-        refreshButton.classList.toggle("loading");
-    }, 400);
-    setTimeout(() => {
-        refreshButton.classList.toggle("loading");
-    }, 800);
 });

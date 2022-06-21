@@ -57,19 +57,36 @@ body {
     transition: box-shadow 0.4s;
 }
 
-.loading {
-    box-shadow: 0 0 40px 5px hsl(150, 100%, 66%);
-}
-
-#diceImage:hover {
+#diceImage:hover,
+#diceImage:focus {
     box-shadow: 0 0 40px 5px hsl(150, 100%, 66%);
     cursor: pointer;
 }
 
-#divider {
+#dividerDesktop {
     margin: auto;
 }
 
 #dice {
     fill: hsl(219, 21%, 13%)
+}
+
+#dividerMobile {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    #outerDiv {
+        width: 350px;
+        height: 400px;
+    }
+
+    #dividerDesktop {
+        display: none;
+    }
+
+    #dividerMobile {
+        display: unset;
+        margin: auto;
+    }
 }
